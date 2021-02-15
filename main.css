@@ -1,0 +1,107 @@
+.content{
+    position: absolute;
+}
+
+/* buttons */
+
+.test{
+    position: absolute;
+    z-index: 12;
+    display: none;
+}
+
+.pos1{
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-left: 10rem;
+}
+
+.pos2{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-left: -8rem;
+    
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.choice{
+    display: block;
+    position: absolute; 
+
+    z-index: 1;
+    background-color: rgba(221, 200, 200, 0.1);  
+
+    border-style: solid;
+    border-radius: 80px;
+    border-color: rgba(218, 210, 210, 0.2);
+
+    box-shadow: rgba(37, 37, 37, 0.6) 0px 0px 32px 0px;
+
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: example;
+}
+
+.one{
+    width: 60px;
+    height: 60px;
+}
+
+.two{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    animation-delay: 0.1s;
+}
+
+.three{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    animation-delay: 0.2s;
+}
+
+@keyframes example{
+    0% {transform: scale(1);}
+
+    20% {transform: scale(1.1);}
+
+    40% {transform: scale(1.2);}
+
+    60% {transform: scale(1.2);}
+
+    80% {transform: scale(1.1);}
+
+    100%{transform: scale(1);}
+}
+
+/* end buttons */
+.title{
+    margin-top: 10px;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: cornsilk;
+    display: none;
+}
+
+.content main{
+    display: block;
+}
+
+.main_choice_1{
+    display: none;
+}
+
+.main_choice_2{
+    display: none;
+}

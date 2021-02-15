@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .navbar{
+             width: 100%;
+             height: 52px;
+             background-image: linear-gradient(to left, #FDAC53 , #F5DF4D);                                                                                                                   
+        }
+    </style>
+    <div class="navbar"></div>
+
+    <style>
+        .important{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .background{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <div class="background">   
+        <div class="important">
+            <div class="content main">
+                <style>
+                    #video_main{
+                        height: 38rem;
+                    }
+                </style>
+                <video id="video_main"  muted>
+                    <source src="all/main.ogg" type=video/ogg>
+                    <source src="all/main.mp4" type=video/mp4>
+                </video> 
+            </div>
+            <div class="content main_choice_1">
+                <style>
+                    #video_main_choice_1{
+                        height: 38rem;
+                    }
+                </style>
+                <video id="video_main_choice_1" muted>
+                    <source src="all/elon.ogg" type=video/ogg>
+                    <source src="all/elon.mp4" type=video/mp4>
+                </video> 
+            </div>
+            <div class="content main_choice_2">
+                <style>
+                    #video_main_choice_2{
+                        height: 38rem;
+                    }
+                </style>
+                <video id="video_main_choice_2" muted>
+                    <source src="all/one.ogg" type=video/ogg>
+                    <source src="all/one.mp4" type=video/mp4>
+                </video> 
+            </div>
+        
+            <h1 class="title"> Choose </h1>
+        
+            <a id="s1" onclick="scenario_2()" class="test pos1" href="#">
+                <div class="center">
+                    <div class="choice one"></div>
+                    <div class="choice two"></div>
+                    <div class="choice three"></div>
+                </div>
+            </a>
+        
+            <a id="s2" onclick="scenario_1()" class="test pos2" href="#">
+                <div class="center">
+                    <div class="choice one"></div>
+                    <div class="choice two"></div>
+                    <div class="choice three"></div>
+                </div>
+            </a>
+
+            <style>
+                .like_dislike{
+                    margin-top: -8px;
+                    display: block;
+                    height: 42rem;
+                    width: 360px;
+                    border: solid linear-gradient(to left, #FDAC53 , #F5DF4D) ;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;;
+                }
+            </style>
+            <div class="like_dislike">
+                <style>
+                    .container_1{
+                        margin-top: 39rem;
+                    }
+
+                    button{
+                        font-weight: 400;
+                        margin-left: 18px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        width: 4rem;
+                        height: 2rem;
+                        border-radius: 36px;
+                        color: rgb(255, 255, 255);
+                        border: rgba(90, 90, 90, 0.246) solid;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                        background-image: linear-gradient(to left, #FDAC53 , #F5DF4D);
+                    }
+
+                    button:hover{
+                        color: #363945;
+                    }
+
+                    button:focus{
+                        outline: none;
+                    }
+                </style>
+                <div class="container_1">
+                    <button onclick="start()">Play</button>
+                    <button onclick="pause()">||</button>
+                    <button onclick="back()">Back</button>
+                    <button onclick="back_choice()">Choice</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+    var buttons = document.getElementsByClassName("test");
+    var title = document.getElementsByClassName("title");
+
+    var main = document.getElementById("video_main");
+    function start(){
+        main.play(); 
+        title[0].style.display = "none"
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+        scenerio_1[0].style.display = 'none';
+        scenerio_2[0].style.display = 'none'; 
+    }
+
+    $( document ).ready(function() {
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+    });
+
+    function pause(){
+        main.pause();  
+    }
+    
+    main.addEventListener('ended', myHandler);
+        function myHandler(event){
+            title[0].style.display = "block"
+            buttons[0].style.display = "block";
+            buttons[1].style.display = "block";
+        }
+
+    var scenerio_1 = document.getElementsByClassName("main_choice_1");
+    var scenerio_2 = document.getElementsByClassName("main_choice_2");
+
+    var video_main_choice_1 = document.getElementById("video_main_choice_1");
+    var video_main_choice_2 = document.getElementById("video_main_choice_2");
+
+    function scenario_2(){
+        title[0].style.display = "none"
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+
+        scenerio_1[0].style.display = 'block';
+        video_main_choice_1.play();
+    }
+
+    function scenario_1(){
+        title[0].style.display = "none"
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+
+        scenerio_2[0].style.display = 'block';
+        video_main_choice_2.play();  
+    }
+
+    function back(){
+        title[0].style.display = "none"
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+        scenerio_1[0].style.display = 'none';
+        scenerio_2[0].style.display = 'none';
+        video_main_choice_1.pause();
+        video_main_choice_2.pause();
+        main.currentTime = 0;
+        start();
+    }
+
+    function back_choice(){
+        title[0].style.display = "none"
+        buttons[0].style.display = "none";
+        buttons[1].style.display = "none";
+        scenerio_1[0].style.display = 'none';
+        scenerio_2[0].style.display = 'none';
+        video_main_choice_1.pause();
+        video_main_choice_2.pause();
+        main.currentTime = 7.2;
+        start();
+    }
+    
+</script>
+</html>
