@@ -157,7 +157,7 @@
   margin-top: 39rem;
 }
 
-button {
+#form, button {
   font-weight: 400;
   margin-left: 18px;
   font-family: Arial, Helvetica, sans-serif;
