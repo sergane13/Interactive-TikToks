@@ -4,62 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="src/styles/styles.css">
+    <title>Document</title>
 </head>
 <body>
+    
+    <!--Template for the video on the feed-->
+    <section class="feed-element">
 
-    <div class="navbar"></div>
+        <h1 id="choose-text">Choose</h1>
+        <a id="choice1" onclick="choice(1)" class="choice">
+            <div class="choice-button">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <div class="circle three"></div>
+            </div>
+        </a>
+        <a id="choice2" onclick="choice(2)" class="choice">
+            <div class="choice-button">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <div class="circle three"></div>
+            </div>
+        </a>
 
-    <div class="background">   
-        <div class="important">
-            <div class="content main">
-                <video id="video_main"  muted>
-                    <source src="src/videos/main.mp4" type=video/mp4>
-                </video> 
-            </div>
-            <div class="content main_choice_1">
-                <video id="video_main_choice_1" muted>
-                    <source src="src/videos/elon.mp4" type=video/mp4>
-                </video> 
-            </div>
-            <div class="content main_choice_2">
-                <video id="video_main_choice_2" muted>
-                    <source src="src/videos/one.mp4" type=video/mp4>
-                </video> 
-            </div>
-        
-            <h1 class="title"> Choose </h1>
-        
-            <a id="s1" onclick="scenario_2()" class="test pos1">
-                <div class="center">
-                    <div class="choice one"></div>
-                    <div class="choice two"></div>
-                    <div class="choice three"></div>
-                </div>
-            </a>
-        
-            <a id="s2" onclick="scenario_1()" class="test pos2">
-                <div class="center">
-                    <div class="choice one"></div>
-                    <div class="choice two"></div>
-                    <div class="choice three"></div>
-                </div>
-            </a>
+        <video id="video-player" class="video-player" src="src/videos/main.mp4"></video>
 
-            <div class="like_dislike">
-                <div class="container_1">
-                    <button onclick="start()">Play</button>
-                    <button onclick="pause()">||</button>
-                    <button onclick="back()">Back</button>
-                    <button onclick="back_choice()">Choice</button>
-                </div>
-            </div>
+        <div id="buttons-menu" class="buttons-menu">
+            <button onClick="start()">Play</button>
+            <button onClick="pause()">Pause</button>
+            <button onClick="back()">Back</button>
+            <button onClick="backChoice()">Choice</button>
         </div>
-    </div>
+    </section>
 
+    <!--Scripts are here-->
     <script src="src/scripts/main.js"></script>
 
 </body>
