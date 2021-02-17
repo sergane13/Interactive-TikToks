@@ -4,6 +4,8 @@
   background-color: rgb(31, 31, 31);
   border: 1px solid rgb(202, 202, 202);
   border-radius: 8px;
+  width: -moz-fit-content;
+  height: -moz-fit-content;
   width: fit-content;
   height: fit-content;
   margin: auto;
@@ -100,8 +102,9 @@
 }
 
 .buttons-menu {
-  padding: 8px 0px;
+  width: -moz-fit-content;
   width: fit-content;
+  padding: 8px 0px;
   margin: auto;
 }
 
