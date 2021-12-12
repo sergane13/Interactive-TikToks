@@ -16,3 +16,7 @@ Built as an initial idea to create an interactive videos platform, a tiktok wher
 
 ## Demo
 * https://sergane13.github.io/Interactive-video/
+
+## Contact
+* You can find me on discord : Serban#0756
+* Project is open source for any kind of use as long as you keep the initial creator
