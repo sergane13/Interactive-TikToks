@@ -15,7 +15,7 @@
 Built as an initial idea to create an interactive videos platform, a tiktok where you can have multiple choices for a video. After some research in the market, the concept was invalidated and we did not have such a good feedback to maintain the project afloat. 
 
 ## Demo
-* https://sergane13.github.io/Interactive-video/
+* https://sergane13.github.io/Interactive-TikToks/
 
 ## Contact
 * You can find me on discord : Serban#0756
